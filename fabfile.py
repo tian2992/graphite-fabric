@@ -45,6 +45,7 @@ def graphite_install():
     sudo('apt-get install -y python-dev python-setuptools libssl-dev libxml2-dev libpng12-dev pkg-config build-essential supervisor make python g++ git-core')
     sudo('easy_install pip')
     sudo('pip install simplejson') # required for django admin
+    sudo('pip install pytz')
     sudo('pip install git+https://github.com/graphite-project/carbon.git@0.9.x#egg=carbon')
     sudo('pip install git+https://github.com/graphite-project/whisper.git@master#egg=whisper')
     sudo('pip install django==1.8.2')
