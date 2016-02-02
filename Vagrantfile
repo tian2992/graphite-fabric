@@ -19,7 +19,10 @@ Vagrant.configure("2") do |config|
   config.vm.network :forwarded_port, guest: 443, host: 8443
   # Port forwarding for Statsd
   config.vm.network "forwarded_port", guest: 8125, host: 8125, protocol: "udp"
-
+  # Carbon port forwarding
+  config.vm.network "forwarded_port", guest: 2023, host: 2023, protocol: "udp"
+  config.vm.network "forwarded_port", guest: 2024, host: 2024, protocol: "udp"
+  
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
   # config.vm.network :private_network, ip: "192.168.33.10"
